@@ -246,7 +246,7 @@
           <input
             id="volume-progress"
             class="progress"
-            max="100"
+            max="50"
             min="0"
             step="1"
             type="range"
@@ -515,8 +515,8 @@
             duration.innerHTML = formatTime(Math.floor(audio.duration));
           };
           // when adjust volume
-          volumeProgress.onchange = function (e) {
-            const newVolume = e.target.value / 100;
+          volumeProgress.oninput = function (e) {
+            const newVolume = e.target.value / 50;
             audio.volume = newVolume;
           };
           // click max volumn
