@@ -39,7 +39,12 @@ body {
 #header {
   text-align: center;
   overflow: hidden;
-  margin-bottom: 10px;
+  position: relative;
+}
+#header .btn-color {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 #header > span {
@@ -83,6 +88,90 @@ body {
   font-size: 18px;
   cursor: pointer;
 }
+#header .btn {
+  padding: 12px 15px;
+  margin-top: -15px;
+  cursor: pointer;
+}
+.overlay{
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.overlay.open {
+  display: initial;
+}
+/* modal-color */
+.container {
+  max-width: 400px;
+  display: none;
+  position: fixed;
+  top: 50px;
+  margin: 0 40px;
+  background-color: var(--primary-color);
+  z-index: 2;
+  border-radius: 10px;
+}
+.container.open{
+  display: initial;
+}
+.modal--header{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.modal--header .modal-name {
+  padding: 20px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.modal--header .modal-close {
+  padding: 14px 20px;
+  margin: auto 0;
+}
+/* cell color */
+
+.modal__body {
+  display: flex;
+  flex-flow: column;
+}
+.modal__body .title{
+  color: white;
+  margin: 0 auto;
+  font-weight: 500px;
+  font-size: 20px;
+}
+.body-color {
+  display: flex;
+  flex-flow: row wrap;
+  color: white;
+  overflow-y: scroll;
+  max-height: 70vh;
+}
+.color__cell{
+  width: 33.33333%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.color__name{
+  font-size: 12px;
+}
+.modal__body .color__block{
+  height: 75px;
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+
+
 /* control-pause */
 #control .btn-pause-play{
   background-color: var(--primary-color);
